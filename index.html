@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="inputContainer">
+            <input type="text" @keydown.enter="addTask" v-model="newTask.testo" placeholder="Nuovo Todo" name="New-Todo"
+                class="textDo">
+            <button class="addButton" @click="addTask">Aggiungi</button>
+        </div>
+
+        <ul class="taskCont">
+            <li class="task" v-for="task in tasks"><span @click="task.check = !task.check"
+                    :class="task.check === true ? 'crossed' : ''">{{ task.testo }} </span><button class="removeButton"
+                    @click="removeTask"></button>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

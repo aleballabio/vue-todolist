@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin:  150px auto;
+    display: flex;
+    justify-content: center;
+    min-width: 500px;
+}
+
+#root {
+    width: 50%;
+}
+
+.inputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.textDo{
+    padding: 1rem;
+    flex-grow: 1;
+    border: solid 1px rgb(112, 112, 112);
+    border-top: solid 1px rgb(80, 80, 80);
+    border-radius: 1rem;
+    margin-right: 20px;
+    
+}
+
+.addButton {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-weight: bold;
+    border-radius: 1rem;
+    border: solid 1px  rgb(112, 112, 112);
+}
+
+.taskCont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+
+}
+
+.task {
+    flex-grow: 1;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    color: rgb(124, 124, 124);
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    
+}
+
+.removeButton::before {
+    content: "\2573";
+}
+
+.removeButton {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-weight: bolder;
+    font-size: .8rem;
+    margin-bottom: 5px;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
